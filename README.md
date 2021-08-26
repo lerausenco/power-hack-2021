@@ -86,11 +86,11 @@ start()
 ```
 
 
-### andre datakilder som kan være interessante
- - strømpriser
- - nettleiepriser 
- - værdata
- - kart
+### Andre datakilder som kan være interessante
+ - Strømpriser
+ - Nettleiepriser 
+ - Værdata
+ - Kart
 
 
 ## Nyttige linker
