@@ -88,7 +88,6 @@ start()
 
 ### Andre datakilder som kan være interessante
  - Strømpriser
- - Nettleiepriser 
  - Værdata
  - Kart
 
@@ -96,7 +95,10 @@ start()
 ## Nyttige linker
 - [Swagger for målere og historisk strømforbruk for disse](https://power-hack.azurewebsites.net/swagger/index.html)
 - [Dokumentasjon for SignalR](https://docs.microsoft.com/en-us/aspnet/core/signalr/introduction?WT.mc_id=dotnet-35129-website&view=aspnetcore-5.0)
-- [API for Strømpriser]()
-- [API fpr Nettleiepriser](https://www.elvia.no/smart-forbruk/api-for-nettleie-priser-kan-gjore-hjemmet-ditt-smartere/)
+- [Strømpriser 2019-2021 i csv format](Strømpriser/)
+  - [2019](Strømpriser/Day-ahead%20Prices_201901010000-202001010000.csv)
+  - [2020](Strømpriser/Day-ahead%20Prices_202001010000-202101010000.csv)
+  - [2021](Strømpriser/Day-ahead%20Prices_202101010000-202201010000.csv)
+- [Strømpriser](https://transparency.entsoe.eu/transmission-domain/r2/dayAheadPrices/show) European Network of Transmission System Operators for Electricity
 - [Vær-data i Elvia området](https://elvia.portal.azure-api.net/) Historiske vær-meldinger, observasjoner og lyn-data. (legg til subscribtion til WeatherIngestApi)
 - [Mer vær-data](https://frost.met.no/index.html) fra Meteorologisk institutt
