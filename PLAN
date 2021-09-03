@@ -6,3 +6,8 @@ Vi prøver følgende clustering metoder:
 LSTM Autoencoder - Lera
 K-Means clustering - Stig
 Affinity propagation - William
+
+Kilder:
+https://towardsdatascience.com/how-to-apply-k-means-clustering-to-time-series-data-28d04a8f7da3
+https://thingsolver.com/how-to-perform-time-series-clustering-using-ml/
+https://towardsdatascience.com/how-to-apply-hierarchical-clustering-to-time-series-a5fe2a7d8447
