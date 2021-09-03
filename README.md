@@ -82,7 +82,7 @@ start()
 ### Andre datakilder og nyttige linker
 Under er en samling nyttige lenker, og andre datakilder, man kan kombinere med dataene fra AMS-måler API'et:
 - [Swagger for målere og historisk strømforbruk for disse](https://power-hack.azurewebsites.net/swagger/index.html)
-- [Dokumentasjon for SignalR](https://docs.microsoft.com/en-us/aspnet/core/signalr/introduction?WT.mc_id=dotnet-35129-website&view=aspnetcore-5.0)
+- [Dokumentasjon for SignalR](https://docs.microsoft.com/en-us/aspnet/core/signalr/introduction?WT.mc_id=dotnet-35129-website&view=aspnetcore-5.0), [.NET Client](https://docs.microsoft.com/en-us/aspnet/core/signalr/dotnet-client?view=aspnetcore-5.0&tabs=visual-studio), [JavaScript client](https://docs.microsoft.com/en-us/aspnet/core/signalr/javascript-client?view=aspnetcore-5.0)
 - [Strømpriser 2019-2021 i csv format](Strømpriser/)
   - [2019](Strømpriser/Day-ahead%20Prices_201901010000-202001010000.csv)
   - [2020](Strømpriser/Day-ahead%20Prices_202001010000-202101010000.csv)
