@@ -1,0 +1,8 @@
+Vi vil gjennomføre clustering av tidsserier for å kunne lage kundeprofilerer. Når vi har laget clustere vil vi prøve følgende:
+(1) Gjennomføre analyse av clusterne og semantikken på tidsseriene som inngår i hvert cluster
+(2) Sette opp et kart som kan brukes til å visualisere kundeprofilene sin posisjon
+
+Vi prøver følgende clustering metoder:
+LSTM Autoencoder - Lera
+K-Means clustering - Stig
+Affinity propagation - William
