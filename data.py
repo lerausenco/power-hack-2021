@@ -18,16 +18,14 @@ def __get_volumes(id, start_date="2019-04-01", end_date="2021-08-01"):
     return response_body
 
 
-def load_dataset():
+def load_dataframe_from_api_to_file():
     meter_information_dictionary = __get_meters()
     dataframe = pd.DataFrame(meter_information_dictionary)
 
     dataframe['volume'] = pd.Series(dtype=object)
     for index, row in dataframe.iterrows():
+        print("Loading index {current} out of {total}. Retrieving meter with identity = {id}"
+              .format(current=index, total=len(dataframe.index), id=row['meteringpointId']))
         dataframe.at[index, 'volume'] = __get_volumes(row['meteringpointId'])
 
-    return dataframe
-
-
-if __name__ == "__main__":
-    dataframe = load_dataset()
+    dataframe.to_csv('dataframe')
