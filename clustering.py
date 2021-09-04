@@ -7,7 +7,7 @@ from tslearn.clustering import TimeSeriesKMeans
 if __name__ == "__main__":
     dataframe = pd.read_pickle('powermeter_dataset')
 
-    dataframe_subset = dataframe[0:10]
+    dataframe_subset = dataframe[0:2]
     x_train = dataframe_subset['volume'].to_numpy()
 
     # Collapse the data array from two one dimensional arrays into a single two dimensional array
@@ -16,5 +16,5 @@ if __name__ == "__main__":
     # Expand dimensions with empty last dimension as tslearn expects three dimensional input
     x_train = np.expand_dims(x_train, axis=-1)
 
-    model = TimeSeriesKMeans(n_clusters=3, metric="dtw", max_iter=10)
-    model.fit(x_train)
+    model = TimeSeriesKMeans(n_clusters=2, metric="dtw", max_iter=1)
+    result = model.fit_predict(x_train)
