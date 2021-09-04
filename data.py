@@ -32,6 +32,7 @@ def load_dataframe_from_api_to_file():
     meter_information_dictionary = __get_meters()
     dataframe = pd.DataFrame(meter_information_dictionary)
     dataframe['volume'] = pd.Series(dtype=object)
+    dataframe['date'] = pd.Series(dtype=object)
 
     for index, row in dataframe.iterrows():
         print("Loading index {current} out of {total}. Retrieving volume for meter with identity = {id}".format(current=index, total=len(dataframe.index), id=row['meteringpointId']))
