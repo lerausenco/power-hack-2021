@@ -4,7 +4,7 @@ import requests
 
 METERPOINT_URL = "https://power-hack.azurewebsites.net/Meteringpoint"
 VOLUME_URL = "https://power-hack.azurewebsites.net/Volumes"
-
+STANDARD_VOLUME_LIST_LENGTH = 20470
 
 def __get_meters():
     response_body = requests.get(METERPOINT_URL).json()
@@ -23,9 +23,8 @@ def __get_volumes_and_dates(id, start_date="2019-04-01", end_date="2021-08-01"):
 
     volumes = volumes_df['value'].to_numpy()
     timestamps = volumes_df['measurementTime'].to_numpy()
-    datetimes = np.vectorize(lambda timestamp: timestamp.to_pydatetime())(timestamps)
 
-    return volumes, datetimes
+    return volumes, timestamps
 
 
 def load_dataframe_from_api_to_file():
@@ -39,6 +38,9 @@ def load_dataframe_from_api_to_file():
         volume_array, date_array = __get_volumes_and_dates(row['meteringpointId'])
         dataframe.at[index, 'volume'] = volume_array
         dataframe.at[index, 'date'] = date_array
+
+    # We will drop any rows that do not match the standard length after filling missing data
+    dataframe.drop(dataframe.loc[dataframe['volume'].map(len) != STANDARD_VOLUME_LIST_LENGTH].index, inplace=True)
 
     dataframe.to_pickle('powermeter_dataset')
 
