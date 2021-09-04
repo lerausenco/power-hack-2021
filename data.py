@@ -24,8 +24,12 @@ def load_dataframe_from_api_to_file():
 
     dataframe['volume'] = pd.Series(dtype=object)
     for index, row in dataframe.iterrows():
-        print("Loading index {current} out of {total}. Retrieving meter with identity = {id}"
+        print("Loading index {current} out of {total}. Retrieving volume for meter with identity = {id}"
               .format(current=index, total=len(dataframe.index), id=row['meteringpointId']))
         dataframe.at[index, 'volume'] = __get_volumes(row['meteringpointId'])
 
-    dataframe.to_csv('dataframe')
+    dataframe.to_pickle('powermeter_dataset')
+
+
+if __name__ == "__main__":
+    load_dataframe_from_api_to_file()

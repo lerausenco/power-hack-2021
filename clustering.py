@@ -1,4 +1,4 @@
-from data import load_dataframe_from_api_to_file
+import pandas as pd
 
 if __name__ == "__main__":
-    pass
+    dataframe = pd.read_pickle('powermeter_dataset')
