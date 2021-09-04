@@ -8,7 +8,7 @@ VOLUME_URL = "https://power-hack.azurewebsites.net/Volumes"
 
 def __get_meters():
     response_body = requests.get(METERPOINT_URL).json()
-    
+
     return response_body
 
 
@@ -39,7 +39,7 @@ def load_dataframe_from_api_to_file():
         dataframe.at[index, 'volume'] = volume_array
         dataframe.at[index, 'date'] = date_array
 
-    dataframe.to_pickle()
+    dataframe.to_pickle('powermeter_dataset')
 
 
 if __name__ == "__main__":
